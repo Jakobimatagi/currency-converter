@@ -9,7 +9,7 @@ const CurrencyConverter = () => {
     const [convertedAmount, setConvertedAmount] = useState('0.00');
     const [exchangeRate, setExchangeRate] = useState(null);
 
-    const URL = `https://v6.exchangerate-api.com/v6/b0dd08baa055f56c75125282/pair/${fromCurrency}/${toCurrency}`
+    const URL = `${process.env.REACT_APP_API_URL}${fromCurrency}/${toCurrency}`
     const currencyCodes = [
         "USD", // United States Dollar
         "EUR", // Euro
